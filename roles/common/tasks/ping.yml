@@ -1,0 +1,3 @@
+# check if a serv is up
+- name: ping remote server
+  ping:
