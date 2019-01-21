@@ -1,2 +1,3 @@
 [common]
-138.68.20.208 ansible_python_interpreter=/usr/bin/python3
+138.68.20.208 ansible_python_interpreter=/usr/bin/python3 kube_caste="fed-master"
+157.230.154.247 ansible_python_interpreter=/usr/bin/python3 kube_caste="fed-node"

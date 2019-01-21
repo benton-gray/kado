@@ -1,0 +1,7 @@
+- name: install packages from fedora
+  dnf:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - kubernetes
+    - etcd

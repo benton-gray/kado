@@ -1,0 +1,19 @@
+# create a new user
+
+- name: create non-root user
+  group:
+    name: "admirals"
+    state: present
+
+- name: create non-root user
+  user:
+    name: "loki"
+    group: "admirals"
+    shell: "/bin/bash"
+    state: present
+
+- name: add authorized key to non-root user
+  authorized_key:
+    user: loki
+    state: present
+    key: "{{ lookup('file', '~/.ssh/do.pub') }}"
